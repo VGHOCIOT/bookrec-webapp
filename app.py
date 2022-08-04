@@ -3,8 +3,8 @@ import pickle
 import pandas as pd
 import numpy as np
 
-with open(f'model/book_rec_model.pkl','rb') as f:
-    model = pickle.load(f)
+# with open(f'model/book_rec_model.pkl','rb') as f:
+#     model = pickle.load(f)
 
 with open(f'model/book_ratings.pkl','rb') as f:
     ratings_df = pickle.load(f)
