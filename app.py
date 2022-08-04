@@ -42,7 +42,7 @@ def main():
 
         exist = create_book_ratings(df_books, existing_ratings_index, existing_ratings)
 
-        return(flask.render_template('main.html',original_input={'ID':user_id},result=exist))
+        return(flask.render_template('main.html',original_input={'ID':user_id},tables=[exist.to_html(classes='data')], titles=exist.columns.values))
 
 if __name__ == '__main__':
     app.run()

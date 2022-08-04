@@ -27,14 +27,18 @@
 </form>
 <br>
 <div class="result" align="center">
-    {% if result %}
+    <!-- {% if result %}
         {% for variable, value in original_input.items() %}
             <b>{{ variable }}</b> : {{ value }}
         {% endfor %}
         <br>
         <br> Predicted number of bikes in use:
            <p style="font-size:50px">{{ result }}</p>
-    {% endif %}
+    {% endif %} -->
+    {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+    {% endfor %}
 </div>
 <h1>Hello world.</h1>
 </html>
